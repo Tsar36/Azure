@@ -1,3 +1,5 @@
-Email,DisplayName
-dmitry.user_1@domain.ws,Dmitry User_1
-iryna.user_2@domain.ws,Iryna User_2
+Email,DisplayName,FirstName,LastName,JobTitle,CompanyName
+user1@company.com,User One,User,One,Engineer,Contoso Ltd
+user2@company.com,User Two,User,Two,Analyst,Fabrikam
+serhii.tsarenkov@cpcs.ws,User Name,Serhii,Tsar,DevOps,cpcs
+notifyme366@gmail.com,User Three,Notify,Me,Manager,Home
