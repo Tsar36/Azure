@@ -5,8 +5,8 @@ foreach ($guest in $guests) {
     $displayName = $guest.DisplayName
     $firstName = $guest.FirstName
     $lastName = $guest.LastName
-    $jobTitle = $guest.JobTitle
-    $company = $guest.CompanyName
+    # $jobTitle = $guest.JobTitle
+    # $company = $guest.CompanyName
 
     Write-Host "We invite: $displayName <$email>"
 

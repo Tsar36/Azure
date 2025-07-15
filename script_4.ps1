@@ -1,15 +1,22 @@
-# Invitation sript for invite the user to the AZ Portal
+# Invite the users with personal invitation text message
 
 Connect-AzureAD
 
 # User data
-$Email = "dmitry@domain.ws"
-$DisplayName = "Dmitry"
-$FirstName = "Dmitry"
+$Email = "serhii@domain.com"
+$DisplayName = "Serhii"
+$FirstName = "Serhii"
 $LastName = "User"
-$JobTitle = "Data Analyst"
+# $CompanyName = "CPCS" The Set-AzureADUser command does not support the "-CompanyName" parameter.
 $RedirectUrl = "https://myapps.microsoft.com"
 
+# Invitation message
+$InvitationMessage = Read-Host "Enter a text message for users... (Invitation message)"
+
+# Message info object
+$MessageInfo = @{
+    CustomizedMessageBody = $InvitationMessage
+}
 
 # Sending an invitation
 $invitation = New-AzureADMSInvitation `
@@ -17,14 +24,15 @@ $invitation = New-AzureADMSInvitation `
   -InviteRedirectUrl $RedirectUrl `
   -SendInvitationMessage $true `
   -InvitedUserDisplayName $DisplayName `
-  -InvitedUserType "Guest"
+  -InvitedUserType "Guest" `
+  -InvitedUserMessageInfo $MessageInfo
 
 if ($invitation.InvitedUser.Id) {
     Set-AzureADUser `
         -ObjectId $invitation.InvitedUser.Id `
         -GivenName $FirstName `
         -Surname $LastName `
-        -JobTitle $JobTitle
+        -CompanyName $CompanyName  # Setting up a company name
 
     Write-Host "✅ Invitation sent and user updated: $DisplayName <$Email>"
 } else {
