@@ -1,5 +1,5 @@
 Email,DisplayName,FirstName,LastName,CompanyName
 user1@example.com,User One,User,One,Microsoft
 user2@example.com,User Two,User,Two,Microsoft
-dmitry@cpc.ws,Staff,Dmitry,Secondname,cpcs
-serhii@cpcs.ws,Staff,Serhii,Secondname,cpcs
+dmitry@company.ws,Staff,Dmitry,Secondname,company
+serhii@domain.ws,Staff,Serhii,Secondname,company

@@ -7,7 +7,7 @@ $Email = "serhii@domain.com"
 $DisplayName = "Serhii"
 $FirstName = "Serhii"
 $LastName = "User"
-# $CompanyName = "CPCS" The Set-AzureADUser command does not support the "-CompanyName" parameter.
+# $CompanyName = "NAME" The Set-AzureADUser command does not support the "-CompanyName" parameter.
 $RedirectUrl = "https://myapps.microsoft.com"
 
 # Invitation message
